@@ -1,5 +1,8 @@
 # ChatGPT提示工程中文版
 
+关注公众号“开放人工智能”，后台回复“会说话的椰子”获取GPT体验卡，进行提示工程体验。
+
+还可访问[酷导航](https://www.kudaohang.com)获取Api key。
 
 [ch1_介绍.ipynb](ch1_介绍.ipynb)
 [ch2_原则.ipynb](ch2_原则.ipynb)
