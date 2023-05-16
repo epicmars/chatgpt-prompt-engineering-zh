@@ -1,0 +1,63 @@
+# ChatGPT提示工程第1课：介绍
+
+提示工程是指构建提示工程(prompt)的技术。在GPT模型中，用户通过输入文本提示与模型进行交互，模型则通过生成文本完成输入文本的续写。prompt engineering的目标是帮助用户构建一个良好的提示，以便模型能够更好地完成任务。提示工程更像是一门艺术而非科学，需要经验和直觉来构建一个成功的提示。
+
+在GPT模型中，文本提示是用户与模型交互的方式。与所有生成式语言模型一样，GPT模型试图生成最可能跟随前文的下一系列单词。就像我们说“当我说<学习提示工程两年半>时，你脑海中首先想到的是什么？”下面的例子演示了这种行为。给出著名内容的前几个单词，模型能够准确地续写文本。
+
+| 提示 | 补全 |
+| --- | --- |
+| 将进酒 李白 |  好的，以下是李白的《将进酒》：君不见黄河之水天上来，奔流到海不复回。君不见高堂明镜悲白发，朝如青丝暮成雪。人生得意须尽欢，莫使金樽空对月。天生我材必有用，千金散尽还复来。烹羊宰牛且为乐，会须一饮三百杯。钟鼓馔玉不足贵，但愿长醉不愿醒。古来圣贤皆寂寞，惟有饮者留其名。陈王昔时宴平乐，斗酒十千恣欢谑。主人何为言少钱，径须沽取对君酌。五花马，千金裘，呼儿将出换美酒，与尔同销万古愁。|
+
+当您开发更复杂的提示时，记住这种基本行为是有帮助的。无论提供什么样的提示，模型都只是根据其训练数据和训练目标确定最可能的响应。
+
+## 设置
+加载API key和相关Python库，依赖库见requirements.txt。
+
+
+```python
+import openai
+import os
+
+from dotenv import load_dotenv, find_dotenv
+_ = load_dotenv(find_dotenv())
+# 在项目根目录的.env文件中填写你的OpenAI API Key
+# 可以在kudaohang.com上获取测试用的key
+openai.api_key  = os.getenv('OPENAI_API_KEY')
+```
+
+在整个课程中，我们将使用 OpenAI 的 gpt-3.5-turbo 模型和[聊天补全](https://platform.openai.com/docs/guides/chat)接口。
+
+这个辅助函数将帮助您更轻松地使用提示并查看生成的输出。
+
+
+```python
+def get_completion(prompt, model="gpt-3.5-turbo"):
+    messages = [{"role": "user", "content": prompt}]
+    response = openai.ChatCompletion.create(
+        model=model,
+        messages=messages,
+        temperature=0, # this is the degree of randomness of the model's output
+    )
+    return response.choices[0].message["content"]
+```
+
+
+```python
+prompt = f"""
+以下是一个有关《西游记》的问题，请简洁、准确地回答。
+
+问题：书中主要人物有哪些？
+"""
+response = get_completion(prompt)
+print(response)
+```
+
+    主要人物包括孙悟空、唐僧、猪八戒、沙僧等。
+    
+
+参考：
+- [提示工程](https://learn.microsoft.com/en-us/azure/cognitive-services/openai/concepts/prompt-engineering)
+- [介绍](https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/1/introduction)
+- [原则](https://learn.deeplearning.ai/chatgpt-prompt-eng/lesson/2/guidelines)
+
+公众号“开放人工智能”，后台回复“会说话的椰子”获取提示工程体验卡。

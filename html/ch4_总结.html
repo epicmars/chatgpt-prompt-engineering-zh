@@ -15121,11 +15121,12 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[1]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">openai</span>
 <span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">import</span> <span class="nn">time</span>
 
 <span class="kn">from</span> <span class="nn">dotenv</span> <span class="kn">import</span> <span class="n">load_dotenv</span><span class="p">,</span> <span class="n">find_dotenv</span>
 <span class="n">_</span> <span class="o">=</span> <span class="n">load_dotenv</span><span class="p">(</span><span class="n">find_dotenv</span><span class="p">())</span>
@@ -15154,7 +15155,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[2]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prod_review</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
@@ -15189,7 +15190,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">prompt</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;&quot;&quot;</span>
@@ -15221,7 +15222,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>柔软可爱的熊猫毛绒玩具，女儿很喜欢，但有点小。提前到达。
+<pre>柔软可爱的熊猫毛绒玩具，女儿很喜欢，但有点小。提前到达，快乐购物体验。
 </pre>
 </div>
 </div>
@@ -15354,7 +15355,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[&nbsp;]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[5]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">review_1</span> <span class="o">=</span> <span class="n">prod_review</span>
@@ -15413,6 +15414,7 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
     <span class="n">response</span> <span class="o">=</span> <span class="n">get_completion</span><span class="p">(</span><span class="n">prompt</span><span class="p">)</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -15432,126 +15434,34 @@ body[data-format='mobile'] .jp-OutputArea-child .jp-OutputArea-output {
 
 
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain">
-<pre>0 可爱柔软的熊猫玩具，但有点小。 
+<pre>0 可爱柔软的熊猫玩具，但有点小。``` 
 
 1 &#34;漂亮灯，带储物空间，快递快，好客服&#34; 
+
+2 电动牙刷续航强，但刷头太小，需要改进。价格合理，让牙齿感觉干净。 
+
+3 11月促销价格欺诈，质量下降，客服无效，需温柔使用。 
 
 </pre>
 </div>
 </div>
-<div class="jp-OutputArea-child">
-    
-    <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-
-
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="application/vnd.jupyter.stderr">
-<pre>
-<span class="ansi-red-intense-fg ansi-bold">---------------------------------------------------------------------------</span>
-<span class="ansi-red-intense-fg ansi-bold">RateLimitError</span>                            Traceback (most recent call last)
-Cell <span class="ansi-green-intense-fg ansi-bold">In[4], line 55</span>
-<span class="ansi-green-fg">     46</span> for i in range(len(reviews)):
-<span class="ansi-green-fg">     47</span>     prompt = f&#34;&#34;&#34;
-<span class="ansi-green-fg">     48</span>     您的任务是从电子商务网站的产品评论中生成一篇简短的摘要。
-<span class="ansi-green-fg">     49</span> 
-<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
-<span class="ansi-green-fg">     52</span>     评论内容如下：: ```{reviews[i]}```
-<span class="ansi-green-fg">     53</span>     &#34;&#34;&#34;
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 55</span>     response = get_completion(prompt)
-<span class="ansi-green-fg">     56</span>     print(i, response, &#34;\n&#34;)
-
-Cell <span class="ansi-green-intense-fg ansi-bold">In[1], line 13</span>, in <span class="ansi-cyan-fg">get_completion</span><span class="ansi-blue-intense-fg ansi-bold">(prompt, model)</span>
-<span class="ansi-green-fg">     11</span> def get_completion(prompt, model=&#34;gpt-3.5-turbo&#34;):
-<span class="ansi-green-fg">     12</span>     messages = [{&#34;role&#34;: &#34;user&#34;, &#34;content&#34;: prompt}]
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 13</span>     response = openai.ChatCompletion.create(
-<span class="ansi-green-fg">     14</span>         model=model,
-<span class="ansi-green-fg">     15</span>         messages=messages,
-<span class="ansi-green-fg">     16</span>         temperature=0, # this is the degree of randomness of the model&#39;s output
-<span class="ansi-green-fg">     17</span>     )
-<span class="ansi-green-fg">     18</span>     return response.choices[0].message[&#34;content&#34;]
-
-File <span class="ansi-green-intense-fg ansi-bold">f:\develop\github\AI\prompt-engineering-zh\.venv\lib\site-packages\openai\api_resources\chat_completion.py:25</span>, in <span class="ansi-cyan-fg">ChatCompletion.create</span><span class="ansi-blue-intense-fg ansi-bold">(cls, *args, **kwargs)</span>
-<span class="ansi-green-fg">     23</span> while True:
-<span class="ansi-green-fg">     24</span>     try:
-<span class="ansi-green-intense-fg ansi-bold">---&gt; 25</span>         return super().create(*args, **kwargs)
-<span class="ansi-green-fg">     26</span>     except TryAgain as e:
-<span class="ansi-green-fg">     27</span>         if timeout is not None and time.time() &gt; start + timeout:
-
-File <span class="ansi-green-intense-fg ansi-bold">f:\develop\github\AI\prompt-engineering-zh\.venv\lib\site-packages\openai\api_resources\abstract\engine_api_resource.py:153</span>, in <span class="ansi-cyan-fg">EngineAPIResource.create</span><span class="ansi-blue-intense-fg ansi-bold">(cls, api_key, api_base, api_type, request_id, api_version, organization, **params)</span>
-<span class="ansi-green-fg">    127</span> @classmethod
-<span class="ansi-green-fg">    128</span> def create(
-<span class="ansi-green-fg">    129</span>     cls,
-<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
-<span class="ansi-green-fg">    136</span>     **params,
-<span class="ansi-green-fg">    137</span> ):
-<span class="ansi-green-fg">    138</span>     (
-<span class="ansi-green-fg">    139</span>         deployment_id,
-<span class="ansi-green-fg">    140</span>         engine,
-<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
-<span class="ansi-green-fg">    150</span>         api_key, api_base, api_type, api_version, organization, **params
-<span class="ansi-green-fg">    151</span>     )
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 153</span>     response, _, api_key = requestor.request(
-<span class="ansi-green-fg">    154</span>         &#34;post&#34;,
-<span class="ansi-green-fg">    155</span>         url,
-<span class="ansi-green-fg">    156</span>         params=params,
-<span class="ansi-green-fg">    157</span>         headers=headers,
-<span class="ansi-green-fg">    158</span>         stream=stream,
-<span class="ansi-green-fg">    159</span>         request_id=request_id,
-<span class="ansi-green-fg">    160</span>         request_timeout=request_timeout,
-<span class="ansi-green-fg">    161</span>     )
-<span class="ansi-green-fg">    163</span>     if stream:
-<span class="ansi-green-fg">    164</span>         # must be an iterator
-<span class="ansi-green-fg">    165</span>         assert not isinstance(response, OpenAIResponse)
-
-File <span class="ansi-green-intense-fg ansi-bold">f:\develop\github\AI\prompt-engineering-zh\.venv\lib\site-packages\openai\api_requestor.py:230</span>, in <span class="ansi-cyan-fg">APIRequestor.request</span><span class="ansi-blue-intense-fg ansi-bold">(self, method, url, params, headers, files, stream, request_id, request_timeout)</span>
-<span class="ansi-green-fg">    209</span> def request(
-<span class="ansi-green-fg">    210</span>     self,
-<span class="ansi-green-fg">    211</span>     method,
-<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
-<span class="ansi-green-fg">    218</span>     request_timeout: Optional[Union[float, Tuple[float, float]]] = None,
-<span class="ansi-green-fg">    219</span> ) -&gt; Tuple[Union[OpenAIResponse, Iterator[OpenAIResponse]], bool, str]:
-<span class="ansi-green-fg">    220</span>     result = self.request_raw(
-<span class="ansi-green-fg">    221</span>         method.lower(),
-<span class="ansi-green-fg">    222</span>         url,
-<span class="ansi-green-intense-fg ansi-bold">   (...)</span>
-<span class="ansi-green-fg">    228</span>         request_timeout=request_timeout,
-<span class="ansi-green-fg">    229</span>     )
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 230</span>     resp, got_stream = self._interpret_response(result, stream)
-<span class="ansi-green-fg">    231</span>     return resp, got_stream, self.api_key
-
-File <span class="ansi-green-intense-fg ansi-bold">f:\develop\github\AI\prompt-engineering-zh\.venv\lib\site-packages\openai\api_requestor.py:624</span>, in <span class="ansi-cyan-fg">APIRequestor._interpret_response</span><span class="ansi-blue-intense-fg ansi-bold">(self, result, stream)</span>
-<span class="ansi-green-fg">    616</span>     return (
-<span class="ansi-green-fg">    617</span>         self._interpret_response_line(
-<span class="ansi-green-fg">    618</span>             line, result.status_code, result.headers, stream=True
-<span class="ansi-green-fg">    619</span>         )
-<span class="ansi-green-fg">    620</span>         for line in parse_stream(result.iter_lines())
-<span class="ansi-green-fg">    621</span>     ), True
-<span class="ansi-green-fg">    622</span> else:
-<span class="ansi-green-fg">    623</span>     return (
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 624</span>         self._interpret_response_line(
-<span class="ansi-green-fg">    625</span>             result.content.decode(&#34;utf-8&#34;),
-<span class="ansi-green-fg">    626</span>             result.status_code,
-<span class="ansi-green-fg">    627</span>             result.headers,
-<span class="ansi-green-fg">    628</span>             stream=False,
-<span class="ansi-green-fg">    629</span>         ),
-<span class="ansi-green-fg">    630</span>         False,
-<span class="ansi-green-fg">    631</span>     )
-
-File <span class="ansi-green-intense-fg ansi-bold">f:\develop\github\AI\prompt-engineering-zh\.venv\lib\site-packages\openai\api_requestor.py:687</span>, in <span class="ansi-cyan-fg">APIRequestor._interpret_response_line</span><span class="ansi-blue-intense-fg ansi-bold">(self, rbody, rcode, rheaders, stream)</span>
-<span class="ansi-green-fg">    685</span> stream_error = stream and &#34;error&#34; in resp.data
-<span class="ansi-green-fg">    686</span> if stream_error or not 200 &lt;= rcode &lt; 300:
-<span class="ansi-green-intense-fg ansi-bold">--&gt; 687</span>     raise self.handle_error_response(
-<span class="ansi-green-fg">    688</span>         rbody, rcode, resp.data, rheaders, stream_error=stream_error
-<span class="ansi-green-fg">    689</span>     )
-<span class="ansi-green-fg">    690</span> return resp
-
-<span class="ansi-red-intense-fg ansi-bold">RateLimitError</span>: Rate limit reached for default-gpt-3.5-turbo in organization org-UJph3hZn7ra2uU9cXIChHdQp on requests per min. Limit: 3 / min. Please try again in 20s. Contact us through our help center at help.openai.com if you continue to have issues. Please add a payment method to your account to increase your rate limit. Visit https://platform.openai.com/account/billing to add a payment method.</pre>
-</div>
-</div>
 
 </div>
 
 </div>
 
+</div>
+<div  class="jp-Cell jp-MarkdownCell jp-Notebook-cell">
+<div class="jp-Cell-inputWrapper">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p>公众号“开放人工智能”，后台回复“会说话的椰子”获取提示工程体验卡。</p>
+
+</div>
+</div>
+</div>
 </div>
 </body>
 
