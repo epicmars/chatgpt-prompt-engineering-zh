@@ -1,17 +1,19 @@
 # ChatGPT提示工程中文版
 
+- [ch1_介绍.ipynb](ch1_介绍.ipynb)
+- [ch2_原则.ipynb](ch2_原则.ipynb)
+- [ch3_迭代.ipynb](ch3_迭代.ipynb)
+- [ch4_总结.ipynb](ch4_总结.ipynb)
+- [ch5_推理.ipynb](ch5_推理.ipynb)
+- [ch6_转换.ipynb](ch6_转换.ipynb)
+- [ch7_扩展.ipynb](ch7_扩展.ipynb)
+- [ch8_聊天机器人.ipynb](ch8_聊天机器人.ipynb)
+## 使用方法
+将.env中的OPENAI_API_KEY替换为自己的API key，即可运行。
+
 关注公众号“开放人工智能”，后台回复“会说话的椰子”获取GPT体验卡，进行提示工程体验。
 
 还可访问[酷导航](https://www.kudaohang.com)获取Api key。
-
-[ch1_介绍.ipynb](ch1_介绍.ipynb)
-[ch2_原则.ipynb](ch2_原则.ipynb)
-[ch3_迭代.ipynb](ch3_迭代.ipynb)
-[ch4_总结.ipynb](ch4_总结.ipynb)
-[ch5_推理.ipynb](ch5_推理.ipynb)
-[ch6_转换.ipynb](ch6_转换.ipynb)
-[ch7_扩展.ipynb](ch7_扩展.ipynb)
-[ch8_聊天机器人.ipynb](ch8_聊天机器人.ipynb)
 
 
 提示工程是指构建提示工程(prompt)的技术。在GPT模型中，用户通过输入文本提示与模型进行交互，模型则通过生成文本完成输入文本的续写。prompt engineering的目标是帮助用户构建一个良好的提示，以便模型能够更好地完成任务。提示工程更像是一门艺术而非科学，需要经验和直觉来构建一个成功的提示。
